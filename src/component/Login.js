@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { userContext } from '../App'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import '../config.env'
 
 const Login = () => {
   // eslint-disable-next-line
@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = loginUser;
     console.log({ email, password });
-    const res = await fetch("https://mernwebkd.vercel.app/Login", {
+    const res = await fetch(`${process.env.REACT_LINK}/Login`, {
       method: "POST",
       headers: {
         'Accept': 'application/json',

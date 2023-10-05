@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import '../config.env'
 
 const Contact = (props) => {
   
@@ -12,7 +12,7 @@ const Contact = (props) => {
   const navigate = useNavigate();
   const callAboutPage = async () => {
     try {
-      const response = await fetch('https://mernwebkd.vercel.app/about', {
+      const response = await fetch(`${process.env.REACT_LINK}/about`, {
         method: 'GET',
         headers:
         {

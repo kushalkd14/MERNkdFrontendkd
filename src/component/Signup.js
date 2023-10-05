@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import '../config.env'
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Signup = () => {
     e.preventDefault();
     const{ name, email, phone, password, cpassword}=user;
     
-      const res = await fetch("https://mernwebkd.vercel.app/Signup",{
+      const res = await fetch(`${process.env.REACT_LINK}/Signup`,{
       method:"POST",
       headers:{
         "Content-Type": "application/json"

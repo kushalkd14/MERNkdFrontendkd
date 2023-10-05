@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import image from '../images/about_pic.jpg'
 import {useNavigate} from 'react-router-dom'
-
+import '../config.env'
 const About = () => {
   const[aboutUser,setAboutUser] = useState({
     _id:"", name:"", email:"", phone:""
@@ -9,7 +9,7 @@ const About = () => {
   const navigate = useNavigate();
   const callAboutPage = async () =>{
     try{
-      const response =await fetch('https://mernwebkd.vercel.app/about',{
+      const response =await fetch(`${process.env.REACT_LINK}/about`,{
         method:'GET',
         headers:
         {

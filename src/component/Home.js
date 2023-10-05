@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react'
-
+import '../config.env'
 const Home = () => {
   const [userName, setUserName] = useState("User");
   const [show, setShow] = useState(false);
   
   const HomePage = async () => {
     try {
-      const response = await fetch('https://mernwebkd.vercel.app/about', {
+      const response = await fetch(`${process.env.REACT_LINK}/about`, {
         method: 'GET',
         headers:
         {

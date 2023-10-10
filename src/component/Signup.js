@@ -21,7 +21,7 @@ const Signup = () => {
     e.preventDefault();
     const{ name, email, phone, password, cpassword}=user;
     
-      const res = await fetch(`${process.env.REACT_LINK}/Signup`,{
+      const res = await fetch(`https://mern-kd-app-api.onrender.com/Signup`,{
       method:"POST",
       headers:{
         "Content-Type": "application/json"

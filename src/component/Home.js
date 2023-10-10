@@ -6,7 +6,7 @@ const Home = () => {
   
   const HomePage = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_LINK}/about`, {
+      const response = await fetch(`https://mern-kd-app-api.onrender.com/about`, {
         method: 'GET',
         headers:
         {

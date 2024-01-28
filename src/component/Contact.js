@@ -17,7 +17,8 @@ const Contact = (props) => {
         headers:
         {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': '*'
         },
         credentials: "include",
         mode: 'cors'

@@ -24,7 +24,8 @@ const Signup = () => {
       const res = await fetch(`https://mern-kd-app-api.onrender.com/Signup`,{
       method:"POST",
       headers:{
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify({
         name,email,phone,password,cpassword

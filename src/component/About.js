@@ -9,7 +9,7 @@ const About = () => {
   const navigate = useNavigate();
   const callAboutPage = async () =>{
     try{
-      const response =await fetch(`https://mer-nkd-backend.vercel.app/`,{
+        const response = await fetch(`https://mer-nkd-backend.vercel.app/about`,{
         method:'GET',
         headers:
         {

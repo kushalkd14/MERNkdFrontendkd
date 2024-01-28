@@ -9,7 +9,7 @@ const About = () => {
   const navigate = useNavigate();
   const callAboutPage = async () =>{
     try{
-      const response =await fetch(`https://mern-kd-app-api.onrender.com/about`,{
+      const response =await fetch(`https://mer-nkd-backend.vercel.app/`,{
         method:'GET',
         headers:
         {

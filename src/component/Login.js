@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = loginUser;
     console.log({ email, password });
-    const res = await fetch(`https://mern-kd-app-api.onrender.com/Login`, {
+      const res = await fetch(`https://mer-nkd-backend.vercel.app/Login`, {
       method: "POST",
       headers: {
         'Accept': 'application/json',
